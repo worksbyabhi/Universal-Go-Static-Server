@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  web-service:
+    build:
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "80:8001"
+    deploy:
+      mode: replicated
+      replicas: 1
